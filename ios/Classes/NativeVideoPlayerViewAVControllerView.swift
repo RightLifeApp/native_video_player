@@ -22,20 +22,16 @@ class NativeVideoPlayerViewAVControllerView: UIView {
 
         backgroundColor = UIColor(red: 0.0, green: 0.0, blue: 0.0, alpha: 0.0)
 
-//        playerLayer.videoGravity = .resize
         addSubview(playerContoller.view)
     }
 
     deinit {
         playerContoller.view.removeFromSuperview()
-//        removeSubview(playerContoller.view)
-//        playerLayer.removeFromSuperlayer()
     }
 
     override func layoutSubviews() {
         super.layoutSubviews()
         playerContoller.view.frame = bounds
-//        playerLayer.removeAllAnimations()
     }
 }
 
