@@ -5,7 +5,7 @@ import AVFoundation
 public class NativeVideoPlayerViewController: NSObject, FlutterPlatformView {
     private let api: NativeVideoPlayerApi
     private let player: AVPlayer
-    private let playerView: NativeVideoPlayerView
+    private let playerView: NativeVideoPlayerViewAVControllerView
 
     init(
         messenger: FlutterBinaryMessenger,
@@ -17,7 +17,7 @@ public class NativeVideoPlayerViewController: NSObject, FlutterPlatformView {
             viewId: viewId
         )
         player = AVPlayer(playerItem: nil)
-        playerView = NativeVideoPlayerView(frame: frame, player: player)
+        playerView = NativeVideoPlayerViewAVControllerView(frame: frame, player: player)
         super.init()
 
         api.delegate = self
