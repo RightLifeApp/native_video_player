@@ -111,6 +111,10 @@ extension NativeVideoPlayerViewController: NativeVideoPlayerApiDelegate {
     func setVolume(volume: Double) {
         player.volume = Float(volume)
     }
+    
+    func exitFullScreen(){
+        playerView.exitFullScreen()
+    }
 }
 
 extension NativeVideoPlayerViewController {
