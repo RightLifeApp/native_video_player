@@ -9,6 +9,7 @@ protocol NativeVideoPlayerApiDelegate: AnyObject {
     func seekTo(position: Int, completion: @escaping () -> Void)
     func setPlaybackSpeed(speed: Double)
     func setVolume(volume: Double)
+    func exitFullScreen()
 }
 
 let invalidArgumentsFlutterError = FlutterError(code: "invalid_argument", message: "Invalid arguments", details: nil)
@@ -100,6 +101,8 @@ class NativeVideoPlayerApi {
             }
             delegate?.setVolume(volume: volume)
             result(nil)
+        case "exitFullScreen":
+            delegate?.exitFullScreen()
         default:
             result(FlutterMethodNotImplemented)
         }

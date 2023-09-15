@@ -78,6 +78,12 @@ class NativeVideoPlayerApi {
     );
   }
 
+  Future<void> exitFullScreen() async {
+    return _channel.invokeMethod<void>(
+      'exitFullScreen',
+    );
+  }
+
   Future<void> seekTo(int position) async {
     await _channel.invokeMethod<void>(
       'seekTo',
