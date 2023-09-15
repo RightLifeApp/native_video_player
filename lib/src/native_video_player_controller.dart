@@ -158,6 +158,10 @@ class NativeVideoPlayerController with ChangeNotifier {
     }
   }
 
+  void exitFullScreen() {
+    _api.exitFullScreen();
+  }
+
   /// Moves the playback position to the given position in seconds.
   ///
   /// NOTE: This method might throw an exception if the video cannot be seeked.
