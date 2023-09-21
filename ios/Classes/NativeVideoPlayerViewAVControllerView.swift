@@ -17,6 +17,7 @@ class NativeVideoPlayerViewAVControllerView: UIView {
         playerContoller.player = player
         playerContoller.view.frame = frame
         playerContoller.showsPlaybackControls = true
+        playerContoller.allowsPictureInPicturePlayback = false
         
         super.init(frame: frame)
 
